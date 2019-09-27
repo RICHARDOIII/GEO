@@ -26,7 +26,7 @@ Grid.dof_xmin =Grid.xc(1);
 % Grid.dof_xmax = scalar cell degree of freedom corrsponding to the right
 % boundary 
 Grid.dof_xmax =Grid.xc(Grid.Nx);
-% Grid.dof_f_xmin = scalar face degree of frxceedom corrsponding to the left
+% Grid.dof_f_xmin = scalar face degree of freedom corrsponding to the left
 % boundary
 Grid.dof_f_xmin =Grid.xf(1);
 % Grid.dof_f_xmax = scalar face degree of freedom corrsponding to the right

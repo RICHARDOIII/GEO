@@ -1,7 +1,7 @@
-function [outputArg1,outputArg2] = build_bnd(inputArg1,inputArg2)
-%BUILD_BND Summary of this function goes here
-%   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+function [B,N,fn] = build_bnd(Param,Grid,I)
+%author: Daniel Espinoza
+% date: 9/27/2019
+% Description:% This function computes 
+%the operators and r.h.s vectors for both Dirichlet% and Neumann boundary conditions.
 end
 

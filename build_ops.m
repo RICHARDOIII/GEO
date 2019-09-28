@@ -6,9 +6,9 @@ function [ G, D, I ] = build_ops( Grid )
 % regular staggered grid using central difference approximations. The
 % discrete gradient assumes homogeneous boundary conditions.
 e = ones(Grid.Nx,1);
-D = spdiags( [-e e],0:1,Grid.Nx,Grid.Nfx);
+D =(1/Grid.dx)* spdiags( [-e e],0:1,Grid.Nx,Grid.Nfx);
 G=-D';
-I= spdiags(e,Grid.Nx,Grid.Nx);
+I= spdiags(e,0,Grid.Nx,Grid.Nx);
 G(1,1)=0;G(Grid.Nfx,Grid.Nx)=0;
 end
 

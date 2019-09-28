@@ -22,15 +22,15 @@ Grid.dof = 1:Grid.Nx;
 Grid.dof_f = 1:Grid.Nfx;
 % Grid.dof_xmin = scalar cell degree of freedom corrsponding to the left
 % boundary 
-Grid.dof_xmin =Grid.xc(1);
+Grid.dof_xmin =Grid.dof(1);
 % Grid.dof_xmax = scalar cell degree of freedom corrsponding to the right
 % boundary 
-Grid.dof_xmax =Grid.xc(Grid.Nx);
+Grid.dof_xmax =Grid.dof(Grid.Nx);
 % Grid.dof_f_xmin = scalar face degree of freedom corrsponding to the left
 % boundary
-Grid.dof_f_xmin =Grid.xf(1);
+Grid.dof_f_xmin =Grid.dof_f(1);
 % Grid.dof_f_xmax = scalar face degree of freedom corrsponding to the right
 % boundary 
-Grid.dof_f_xmax =Grid.xf(Grid.Nfx);
+Grid.dof_f_xmax =Grid.dof_f(Grid.Nfx);
 end
 

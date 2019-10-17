@@ -1,4 +1,5 @@
 %% Physical properties
+clc,clear all,close all;
 cm2m = 1/100;        % cm to m conversion
 yr2s = 365*24*60^2;  % yr to s conversion
 
@@ -38,12 +39,24 @@ Param.g=[F(Grid.xc(Grid.dof_xmin));F(Grid.xc(Grid.dof_xmax))];
 h = solve_lbvp(L,fs+fn,B,Param.g,N);
 fs=Param.qp/b*ones(Grid.Nx,1);
 q=comp_flux(D,Param.K,G,h,fs,Grid,Param);
-subplot(1,2,1)
+subplot(1,3,1)
 hold on
 plot(Grid.xc,h,'o')
 plot(Grid.xc,F(Grid.xc))
+legend('Analytical','Numerical')
 hold off
-subplot(1,2,2)
+subplot(1,3,2)
 hold on 
 plot(Grid.xf,Phi(Grid.xf));
 plot(Grid.xf,q,'o')
+legend('Analytical','Numerical')
+hold off
+subplot(1,3,3)
+hold on
+A=Param.qp/b*Length*yr2s;
+y=A;
+line([0,Length],[y,y])
+N=sum(q.*Grid.A*yr2s);
+y=N;
+line([0,Length],[y,y],'Color','red')
+legend('Analytical','Numerical')

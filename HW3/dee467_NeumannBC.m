@@ -1,6 +1,6 @@
-% file name: eid_NeumannBC.m
-% author: Pancho Villa
-% date: 15 Apr 1915
+% file name: dee467_NeumannBC.m
+% author: Daniel Espinoza
+% date: July 20, 1923
 clc, close all, clear all
 %% Physical properties in cgs units
 Length = 45;    % length of column [cm]
